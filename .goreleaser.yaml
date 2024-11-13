@@ -50,7 +50,7 @@ release:
 
 dockers:
   - image_templates:
-      - flashcatcloud/cprobe:{{ .Tag }}-amd64
+      - crossoverjie/cprobe:{{ .Tag }}-amd64
     goos: linux
     goarch: amd64
     ids:
@@ -63,7 +63,7 @@ dockers:
       - "--platform=linux/amd64"
 
   - image_templates:
-      - flashcatcloud/cprobe:{{ .Tag }}-arm64v8
+      - crossoverjie/cprobe:{{ .Tag }}-arm64v8
     goos: linux
     goarch: arm64
     ids:
@@ -76,12 +76,12 @@ dockers:
       - "--platform=linux/arm64/v8"
 
 docker_manifests:
-  - name_template: flashcatcloud/cprobe:{{ .Tag }}
+  - name_template: crossoverjie/cprobe:{{ .Tag }}
     image_templates:
-      - flashcatcloud/cprobe:{{ .Tag }}-amd64
-      - flashcatcloud/cprobe:{{ .Tag }}-arm64v8
+      - crossoverjie/cprobe:{{ .Tag }}-amd64
+      - crossoverjie/cprobe:{{ .Tag }}-arm64v8
 
-  - name_template: flashcatcloud/cprobe:latest
+  - name_template: crossoverjie/cprobe:latest
     image_templates:
-      - flashcatcloud/cprobe:{{ .Tag }}-amd64
-      - flashcatcloud/cprobe:{{ .Tag }}-arm64v8
+      - crossoverjie/cprobe:{{ .Tag }}-amd64
+      - crossoverjie/cprobe:{{ .Tag }}-arm64v8
